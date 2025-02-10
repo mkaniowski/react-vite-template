@@ -25,15 +25,7 @@ export default [
   depend.configs['flat/recommended'],
   sonarjs.configs.recommended,
   {
-    ignores: [
-      'src/routeTree.gen.ts',
-      '**/vite.config.ts',
-      'dist',
-      '/src/components/ui',
-      'cypress.config.ts',
-      '**.cy.tsx',
-      '**.spec.tsx',
-    ],
+    ignores: ['src/routeTree.gen.ts', '**/vite.config.ts', 'dist', '**.cy.tsx', '**.spec.tsx'],
   },
   ...fixupConfigRules(
     compat.extends(
@@ -56,7 +48,12 @@ export default [
       ecmaVersion: 'latest',
       sourceType: 'module',
       parserOptions: {
-        project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
+        project: [
+          './tsconfig.json',
+          './tsconfig.node.json',
+          './tsconfig.app.json',
+          './tsconfig.eslint.json',
+        ],
         tsconfigRootDir: __dirname, // Adjust this path if necessary
       },
     },
@@ -65,7 +62,6 @@ export default [
     },
     rules: {
       'unicorn/better-regex': 'error',
-      // Add more unicorn rules as needed
     },
   },
   {
@@ -79,10 +75,6 @@ export default [
       parser: tsParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parserOptions: {
-        project: ['./tsconfig.json', './tsconfig.node.json'],
-        tsconfigRootDir: __dirname,
-      },
     },
     settings: {
       react: {

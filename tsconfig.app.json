@@ -57,7 +57,7 @@
     "src/**/*.js",
     "**/*.gen.ts",
     "tailwind.config.js",
-    "eslint.confuig.js"
+    "eslint.config.js"
   ],
   "exclude": [
     "node_modules",
