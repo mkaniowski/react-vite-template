@@ -27,7 +27,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/react-vite-template.git
+git clone https://github.com/mkaniowski/react-vite-template.git
 cd react-vite-template
 
 # Install dependencies
