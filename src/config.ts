@@ -48,8 +48,7 @@ export const IMG_OPTIMIZE_OPTIONS = {
   tiff: {
     // https://sharp.pixelplumbing.com/api-output#tiff
     quality: 100,
-  },
-  // gif does not support lossless compression
+  }, // gif does not support lossless compression
   // https://sharp.pixelplumbing.com/api-output#gif
   gif: {},
   webp: {
